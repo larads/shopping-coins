@@ -5,9 +5,11 @@ import CustomHome from "@/components/custom-home";
 import CardMoneyShop from "@/components/card-money-shop";
 import CustomProfileHome from "@/components/custom-profile-home";
 import CardAdsShoppingCoins, { AdsProps } from "@/components/card-ads-shopping-coins";
+import CardProduct, { ProductProps } from "@/components/card-product";
 
 export default function Home() {
     const [ads, setAds] = useState<AdsProps[]>([])
+    const [products, setProducts] = useState<ProductProps[]>([])
 
     return (
         <SafeAreaView className="flex-1 bg-purple relative">
@@ -29,6 +31,15 @@ export default function Home() {
                         <CardAdsShoppingCoins />
                     )}
                 />
+                <View>
+                    <FlatList
+                        horizontal
+                        data={products}
+                        keyExtractor={(item) => item.id}
+                        renderItem={({ item }) => (
+                            <CardProduct />
+                        )} />
+                </View>
                 <TouchableOpacity className="bg-purple rounded-full h-14 w-56 justify-center items-center">
                     <Text className="text-[#ffff] font-bold text-xl">Ver todos os produtos</Text>
                 </TouchableOpacity>

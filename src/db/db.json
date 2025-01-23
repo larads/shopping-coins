@@ -1,0 +1,45 @@
+{
+    "products": [
+        {
+            "id": 1,
+            "name": "Notebook L24",
+            "quantity": 34,
+            "price": 4000,
+            "image": "../assets/products/notebook.jpg",
+            "category": "tecnology"
+        },
+        {
+            "id": 2,
+            "name": "Óculos VR",
+            "quantity": 30,
+            "price": 2000,
+            "image": "../assets/products/glasesVr.jpg",
+            "category": "tecnology"
+        },
+        {
+            "id": 3,
+            "name": "Camisa Roxa",
+            "quantity": 40,
+            "price": 4000,
+            "image": "../assets/products/shirt.jpg",
+            "category": "closeth"
+        },
+        {
+            "id": 4,
+            "name": "Relógio DaHora",
+            "quantity": 40,
+            "price": 800,
+            "image": "../assets/products/oClock.jpg",
+            "category": "tecnology"
+        }
+    ],
+    "notifications": [
+        {
+            "id": 1,
+            "user_id": "",
+            "message": "",
+            "shipping": "",
+            "arrival": ""
+        }
+    ]
+}
