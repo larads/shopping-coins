@@ -35,7 +35,7 @@ const buttonTextVariants = cva('text-center font-medium', {
     variants: {
         variant: {
             default: 'text-white',
-            gray: 'text-gray-200', // Ajustado para "gray"
+            gray: 'text-white',
         },
         size: {
             default: 'text-[18px] font-[600] leading-[22.68px]',

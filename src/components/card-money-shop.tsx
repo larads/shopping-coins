@@ -11,7 +11,7 @@ export default function CardMoneyShop() {
                     Lc <Text className="font-bold text-xl">5.000.000</Text>
                 </Text>
             </View>
-            <View className="w-[2px] h-full bg-gray-300 mx-4" />
+            <View className="w-[2px] h-full mx-4" />
             <TouchableOpacity className="flex-1 flex-row items-center justify-center">
                 <ShoppingBag size={24} color={colors.purple} />
                 <Text className="font-semibold ml-2">Shop</Text>
