@@ -5,11 +5,25 @@ import { Home, ShoppingBag, UserRound } from "lucide-react-native";
 export default function TabsLayout() {
     return (
         <>
-            <Tabs screenOptions={{
-                headerShown: false,
-                tabBarActiveTintColor: colors.purple,
-                tabBarShowLabel: false,
-            }}
+            <Tabs
+                screenOptions={{
+                    headerShown: false,
+                    tabBarActiveTintColor: colors.purple,
+                    tabBarShowLabel: false,
+                    tabBarStyle: {
+                        height: 70,
+                        paddingTop: 12,
+                        borderTopLeftRadius: 20,
+                        borderTopRightRadius: 20,
+                        backgroundColor: colors.white,
+                        position: "absolute",
+                        shadowColor: "#000",
+                        shadowOffset: { width: 0, height: -2 },
+                        shadowOpacity: 0.1,
+                        shadowRadius: 10,
+                        elevation: 5,
+                    }
+                }}
                 initialRouteName="index"
             >
                 <Tabs.Screen
