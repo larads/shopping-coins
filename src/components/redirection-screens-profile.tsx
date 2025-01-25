@@ -5,11 +5,12 @@ import { TouchableOpacity, View, TouchableOpacityProps, Text } from "react-nativ
 interface ButtonProps extends TouchableOpacityProps {
     icon: any
     label: string
+    onPress: VoidFunction
 }
 
-export default function RedirectionScreenProfile({ label, icon }: ButtonProps) {
+export default function RedirectionScreenProfile({ label, icon, onPress }: ButtonProps) {
     return (
-        <TouchableOpacity className="w-full rounded-full bg-[#ffff] h-20 p-2 mb-5 flex-row items-center justify-between">
+        <TouchableOpacity className="w-full rounded-full bg-[#ffff] h-20 p-2 mb-5 flex-row items-center justify-between" onPress={onPress}>
             <View className="flex-row p-4">
                 {icon}
                 <Text className="font-bold text-xl ml-5">{label}</Text>

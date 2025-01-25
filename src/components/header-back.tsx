@@ -9,7 +9,7 @@ interface HeaderBack extends TouchableOpacityProps {
 
 export default function HeaderBack({ label, onBack }: HeaderBack) {
     return (
-        <View className="w-full flex-row items-center">
+        <View className="w-full flex-row items-center py-5">
             <TouchableOpacity onPress={onBack}>
                 <SquareArrowLeft size={28} color={colors.white} />
             </TouchableOpacity>

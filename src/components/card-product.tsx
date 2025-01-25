@@ -1,16 +1,16 @@
 import React, { useState } from "react"
 import { colors } from "@/styles/colors"
 import { CircleCheckBig, ShoppingCart } from "lucide-react-native"
-import { View, Text, Image, TouchableOpacity, ActivityIndicator } from "react-native"
 import PurchaseModalNotification from "./purchase-modal-notification"
+import { View, Text, Image, TouchableOpacity, ActivityIndicator } from "react-native"
 
 export interface ProductProps {
-    id: string
+    id: number
     name: string
-    price: number
-    image: string | number
     quantity: number
-    category?: string
+    price: number
+    image: any
+    category: string
 }
 
 export default function CardProducts({
@@ -34,25 +34,26 @@ export default function CardProducts({
     }
 
     return (
-        <View className="mt-auto px-4">
-            <View className="w-[160px] h-[250px] bg-[#ffff] rounded-lg shadow-md p-2">
+        <View className="flex-1 justify-center items-center mt-4 px-3">
+            <View className="w-[160px] bg-white rounded-lg shadow-lg p-4">
                 <Image
-                    source={typeof image === 'string' ? { uri: image } : image}
+                    source={image}
                     className="w-full h-[110px] rounded-md"
                     resizeMode="cover"
                 />
 
-                <Text className="text-xl font-bold mt-2">{name}</Text>
-                <Text className="text-base text-gray-500 font-light">{quantity} unidades</Text>
-                <View className="flex-row justify-between mt-3">
-                    <View className="mt-3">
-                        <Text className="text-xl font-bold text-purple">Lc</Text>
-                        <Text className="text-xl font-bold text-purple">{price.toFixed(2)}</Text>
+                <Text className="text-lg font-semibold mt-3">{name}</Text>
+                <Text className="text-sm text-gray-500 mt-1">{quantity} unidades</Text>
+
+                <View className="flex-row justify-between items-center mt-3">
+                    <View>
+                        <Text className="text-base font-bold text-purple">Lc</Text>
+                        <Text className="text-lg font-bold text-purple">{price.toFixed(2)}</Text>
                     </View>
 
                     <TouchableOpacity
                         onPress={handlePurchase}
-                        className="bg-purple rounded-2xl mt-5 h-10 w-10 items-center justify-center"
+                        className="bg-purple rounded-full mt-2 p-2 items-center justify-center"
                         disabled={isPurchased}
                     >
                         {isLoading ? (
@@ -65,7 +66,6 @@ export default function CardProducts({
                     </TouchableOpacity>
                 </View>
             </View>
-
             <PurchaseModalNotification isVisible={isLoading} />
         </View>
     )

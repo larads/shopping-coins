@@ -1,12 +1,17 @@
-import { colors } from "@/styles/colors";
-import { Camera } from "lucide-react-native";
-import { TouchableOpacity, Image, View } from "react-native";
+import { colors } from "@/styles/colors"
+import { Camera } from "lucide-react-native"
+import { TouchableOpacity, Image, View } from "react-native"
 
-export default function PictureUserProfile() {
+interface PictureProps {
+    onPress?: VoidFunction
+    imageUri?: string | null
+}
+
+export default function PictureUserProfile({ onPress, imageUri }: PictureProps) {
     return (
-        <TouchableOpacity className="flex items-center justify-center">
+        <TouchableOpacity className="flex items-center justify-center" onPress={onPress}>
             <Image
-                source={{ uri: 'https://github.com/larads.png' }}
+                source={imageUri ? { uri: imageUri } : { uri: 'https://github.com/larads.png' }}
                 className="h-36 w-36 rounded-2xl border border-white"
             />
 
@@ -14,5 +19,5 @@ export default function PictureUserProfile() {
                 <Camera size={24} color={colors.purple} />
             </View>
         </TouchableOpacity>
-    );
+    )
 }

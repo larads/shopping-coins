@@ -11,7 +11,7 @@ export interface AdsProps {
 
 export default function CardAdsShoppingCoins() {
     return (
-        <View className="bg-purple w-[298px] h-[95px]  rounded-3xl mt-10 p-4 flex-row items-center ml-4">
+        <View className="bg-purple w-[298px] h-[80px] rounded-3xl mt-10 p-4 flex-row items-center ml-4">
             <View className="flex-1 items-center justify-center">
                 <Image
                     source={require('@/assets/products/adsTrip.png')}

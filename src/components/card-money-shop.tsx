@@ -4,7 +4,7 @@ import { View, Text, TouchableOpacity } from "react-native"
 
 export default function CardMoneyShop() {
     return (
-        <View className="bg-[#ffff] h-16 px-4 w-full flex-row justify-between items-center rounded-xl">
+        <View className="bg-[#ffff] h-16 px-4 w-full flex-row justify-between shadow-xl items-center rounded-xl">
             <View className="flex-1 flex-row items-center">
                 <Wallet size={24} color={colors.purple} />
                 <Text className="font-semibold text-xl ml-2">
