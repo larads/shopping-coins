@@ -12,6 +12,6 @@ export interface ProductsProps {
 }
 
 export async function getProducts() {
-    const response = await api.get<ProductsProps[]>('products')
+    const response = await api.get<ProductsProps[]>('/products')
     return response.data
 }

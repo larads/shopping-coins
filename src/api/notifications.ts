@@ -8,11 +8,7 @@ export interface NotificationProps {
     estimated_arrival_date: string
 }
 
-export async function getNotifications(userId: string) {
-    const response = await api.get('notifications', {
-        params: {
-            user_id: userId,
-        },
-    })
+export async function getNotifications(userId: string): Promise<NotificationProps[]> {
+    const response = await api.get(`/notifications?userId=${userId}`)
     return response.data
 }
